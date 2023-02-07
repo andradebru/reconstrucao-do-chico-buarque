@@ -1,6 +1,9 @@
 <template>
-    <v-container>
-
+    <v-container blue>
+        grid of gigs
+        <GigCard/>
+        <GigCard/>
+        <GigCard/>
     </v-container>
 </template>
 
@@ -8,13 +11,15 @@
 
 import GridOfGigs from '~/components/GridOfGigs.vue'
 import PickDate from '~/components/PickDate.vue'
+import GigCard from '~/components/GigCard.vue'
 
 
 export default ({
-    // components: {
+    components: {
     //     GridOfGigs,
     //     PickDate
-    // },
+    GigCard
+    },
     data () {
         return {}
     }

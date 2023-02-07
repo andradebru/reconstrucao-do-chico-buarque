@@ -1,22 +1,19 @@
 <template>
-    <v-container>
-
+    <v-container red>
+    <v-row justify="center">
+        <v-date-picker v-model="picker"></v-date-picker>
+    </v-row>
     </v-container>
 </template>
 
 <script>
+  export default {
+    data: () => ({
+      date: '2018-03-02',
+    }),
 
-import GridOfGigs from '~/components/GridOfGigs.vue'
-import PickDate from '~/components/PickDate.vue'
-
-
-export default ({
-    // components: {
-    //     GridOfGigs,
-    //     PickDate
-    // },
-    data () {
-        return {}
-    }
-})
+    methods: {
+      allowedDates: val => parseInt(val.split('-')[2], 10) % 2 === 0,
+    },
+  }
 </script>
