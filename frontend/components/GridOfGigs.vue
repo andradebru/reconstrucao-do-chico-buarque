@@ -2,14 +2,13 @@
   <v-card class="mx-auto" max-width="500">
     <v-text-field
       class="ma-4"
-      v-model="newGig"
       @keyup.enter="add()"
-      label="Add a gig and hit enter"
+      label="Add a concert and hit enter"
       :loading="adding"
     />
     <v-container fluid>
       <v-row dense>
-        <v-col v-for="gig in gigs" :key="gig.artist" :cols="gig.flex">
+        <v-col v-for="gig in gigs" :key="gig.id" :cols="gig.flex">
           <v-card>
             <v-img
               :src="gig.imgsrc"
@@ -17,16 +16,17 @@
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="200px"
             >
-              <v-card-title v-text="gig.artist"></v-card-title>
+              <!-- <v-card-title v-text="gig.artist"></v-card-title> -->
+              <v-card-title>{{ gig.artist }}</v-card-title>
             </v-img>
 
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn>
-                editar
+                Edit
               </v-btn>
               <v-btn>
-                excluir
+                Delete
               </v-btn>
 
               <!-- icones nao estao funcionando deus nos ajude
@@ -53,54 +53,35 @@
 import AppApi from "~apijs";
 
 export default {
-  data() {
-    return {
-      newGig: "",
-      adding: false,
-      loading: false,
-      items: []
-    };
-  },
   data: () => ({
-    gigs: [
-      {
-        artist: "Metallica",
-        imgsrc:
-          "https://i0.wp.com/guitarload.com.br/wp-content/uploads/2021/09/metallica-tributo-black-album.jpg?fit=1200%2C628&ssl=1",
-        flex: 12
-      },
-      {
-        artist: "Wesley Safadao",
-        imgsrc:
-          "https://vejasp.abril.com.br/wp-content/uploads/2017/04/wesley-safadao.jpg",
-        flex: 6
-      },
-      {
-        artist: "Ney Matogrosso",
-        imgsrc:
-          "https://esquinamusical.com.br/wp-content/uploads/2022/02/neymatogrosso.jpg",
-        flex: 6
-      }
-    ]
+    gigs: [],
+    newGig: "",
+    adding: false,
+    loading: false,
   }),
-  mounted() {
-    this.loading = true;
-    AppApi.list_gigs().then(response => {
-      const gigs = response.data.gigs;
-      this.items = gigs;
-      this.loading = false;
-    });
+  created() {
+    this.fetchGigs()
   },
   methods: {
+    async fetchGigs() {
+      const response = await AppApi.list_gigs()
+      this.gigs = response.data.gigs
+    },
     add() {
       this.adding = true;
-      AppApi.add_gig(this.newGig).then(response => {
+      add_gig(this.newGig).then(response => {
         const gigs = response.data;
         this.items.push(gigs);
         this.newGig = "";
         this.adding = false;
       });
     }
+    // update() {
+
+    // },
+    // delete() {
+
+    // }
   }
 };
 </script>

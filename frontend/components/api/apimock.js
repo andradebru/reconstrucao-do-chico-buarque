@@ -38,26 +38,29 @@ const api = {
           }
         : { authenticated: false }
     );
-  },
+  }, 
   add_gig(newGig) {
-    return mockasync({ artist: newGig, done: false });
+    return mockasync({ artist: newGig, imgsrc: false });
   },
   list_gigs() {
     return mockasync({
       gigs: [
         {
+          id: 0,
           artist: "Metallica",
           imgsrc:
             "https://i0.wp.com/guitarload.com.br/wp-content/uploads/2021/09/metallica-tributo-black-album.jpg?fit=1200%2C628&ssl=1",
           flex: 12
         },
         {
+          id: 1,
           artist: "Wesley Safadao",
           imgsrc:
             "https://vejasp.abril.com.br/wp-content/uploads/2017/04/wesley-safadao.jpg",
           flex: 6
         },
         {
+          id: 2,
           artist: "Ney Matogrosso",
           imgsrc:
             "https://esquinamusical.com.br/wp-content/uploads/2022/02/neymatogrosso.jpg",
