@@ -1,27 +1,49 @@
 <template>
-  <v-container fluid blue>
-    <v-row dense>
-      <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
-        v-for of gigs
-        <GigCard />
-        <!-- <GigCard />
-        <GigCard /> -->
-        <!-- <GigCard />
-        <GigCard /> -->
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-card class="mx-auto" max-width="500">
+    <v-container fluid>
+      <v-row dense>
+        <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
+          <v-card>
+            <v-img
+              :src="card.src"
+              class="white--text align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="200px"
+            >
+              <v-card-title v-text="card.title"></v-card-title>
+            </v-img>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn>
+                editar
+              </v-btn>
+              <v-btn>
+                excluir
+              </v-btn>
+
+              <!-- icones nao estao funcionando deus nos ajude
+               <v-btn icon>
+                <v-icon>mdi-heart</v-icon>
+              </v-btn> -->
+              <!-- <v-btn icon>
+                <v-icon>mdi-bookmark</v-icon>
+              </v-btn>
+
+              <v-btn icon>
+                <v-icon>mdi-share-variant</v-icon>
+              </v-btn> -->
+            </v-card-actions>
+            <v-spacer></v-spacer>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>
-import GridOfGigs from "~/components/GridOfGigs.vue";
-import PickDate from "~/components/PickDate.vue";
-import GigCard from "~/components/GigCard.vue";
-
 export default {
-  components: {
-    GigCard
-  },
   data: () => ({
     cards: [
       {
