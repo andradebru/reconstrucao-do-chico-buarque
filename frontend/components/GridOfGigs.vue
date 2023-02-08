@@ -1,12 +1,13 @@
 <template>
   <v-card class="mx-auto" max-width="500">
-    <v-text-field
+    <!-- <v-text-field
       class="ma-4"
       @keyup.enter="add()"
       label="Add a concert and hit enter"
       :loading="adding"
-    />
+    /> -->
     <v-container fluid>
+      <FormGig/>
       <v-row dense>
         <v-col v-for="gig in gigs" :key="gig.id" :cols="gig.flex">
           <v-card>
@@ -16,18 +17,23 @@
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="200px"
             >
-              <!-- <v-card-title v-text="gig.artist"></v-card-title> -->
-              <v-card-title>{{ gig.artist }}</v-card-title>
+              <v-card-title><h2><b>{{ gig.artist }} - {{ gig.date }}</b></h2></v-card-title>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  fab
+                  x-small>
+                  ✎
+                </v-btn>
+                <v-btn
+                  fab
+                  color="error"
+                  x-small>
+                  <b>x</b>
+                </v-btn>
+              </v-card-actions>
             </v-img>
 
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn>
-                Edit
-              </v-btn>
-              <v-btn>
-                Delete
-              </v-btn>
 
               <!-- icones nao estao funcionando deus nos ajude
                <v-btn icon>
@@ -40,25 +46,35 @@
               <v-btn icon>
                 <v-icon>mdi-share-variant</v-icon>
               </v-btn> -->
-            </v-card-actions>
             <v-spacer></v-spacer>
           </v-card>
         </v-col>
+        <v-spacer></v-spacer>
       </v-row>
+
     </v-container>
   </v-card>
 </template>
 
 <script>
 import AppApi from "~apijs";
+import FormGig from "~/components/FormGig.vue"
 
 export default {
   data: () => ({
     gigs: [],
-    newGig: "",
+    newGig: {
+        id: "",
+        artist: "",
+        imgsrc: "",
+        date: "",
+      },
     adding: false,
     loading: false,
   }),
+  components: {
+    FormGig
+  },
   created() {
     this.fetchGigs()
   },
@@ -67,14 +83,7 @@ export default {
       const response = await AppApi.list_gigs()
       this.gigs = response.data.gigs
     },
-    add() {
-      this.adding = true;
-      add_gig(this.newGig).then(response => {
-        const gigs = response.data;
-        this.items.push(gigs);
-        this.newGig = "";
-        this.adding = false;
-      });
+    
     }
     // update() {
 
@@ -83,5 +92,4 @@ export default {
 
     // }
   }
-};
 </script>

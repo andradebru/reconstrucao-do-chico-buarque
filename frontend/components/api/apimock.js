@@ -50,21 +50,25 @@ const api = {
           artist: "Metallica",
           imgsrc:
             "https://i0.wp.com/guitarload.com.br/wp-content/uploads/2021/09/metallica-tributo-black-album.jpg?fit=1200%2C628&ssl=1",
-          flex: 12
+          // flex: 12,
+          date: "02/05/23"
         },
         {
           id: 1,
           artist: "Wesley Safadao",
           imgsrc:
             "https://vejasp.abril.com.br/wp-content/uploads/2017/04/wesley-safadao.jpg",
-          flex: 6
+          // flex: 6,
+          date: "02/05/23"
+
         },
         {
           id: 2,
           artist: "Ney Matogrosso",
           imgsrc:
             "https://esquinamusical.com.br/wp-content/uploads/2022/02/neymatogrosso.jpg",
-          flex: 6
+          // flex: 6,
+          date: "02/05/23"
         }
       ]
     });

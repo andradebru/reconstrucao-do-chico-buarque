@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <PickDate />
+    <!-- <PickDate /> -->
     <GridOfGigs />
   </v-container>
 </template>
