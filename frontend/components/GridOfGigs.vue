@@ -63,23 +63,17 @@ import FormGig from "~/components/FormGig.vue"
 export default {
   data: () => ({
     gigs: [],
-    newGig: {
-        id: "",
-        artist: "",
-        imgsrc: "",
-        date: "",
-      },
-    adding: false,
+
     loading: false,
   }),
   components: {
     FormGig
   },
   created() {
-    this.fetchGigs()
+    this.listGigs()
   },
   methods: {
-    async fetchGigs() {
+    async listGigs() {
       const response = await AppApi.list_gigs()
       this.gigs = response.data.gigs
     },
