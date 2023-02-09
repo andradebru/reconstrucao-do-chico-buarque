@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="500">
+  <v-card class="mx-auto" max-width="100vw">
     <!-- <v-text-field
       class="ma-4"
       @keyup.enter="add()"
@@ -11,28 +11,32 @@
       <v-row dense>
         <v-col v-for="gig in gigs" :key="gig.id" :cols="gig.flex">
           <v-card>
-            <v-img
-              :src="gig.imgsrc"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title><h2><b>{{ gig.artist }} - {{ gig.date }}</b></h2></v-card-title>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn
-                  fab
-                  x-small>
-                  ✎
-                </v-btn>
-                <v-btn
-                  fab
-                  color="error"
-                  x-small>
-                  <b>x</b>
-                </v-btn>
-              </v-card-actions>
-            </v-img>
+            <div>
+              <div class="d-flex flex-column">
+                <v-img
+                  :src="gig.imgsrc"
+                  class="white--text align-end"
+                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                  height="400px"
+                >
+                  <v-card-title><h2><b>{{ gig.artist }} - {{ gig.date }}</b></h2></v-card-title>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                      fab
+                      x-small>
+                      ✎
+                    </v-btn>
+                    <v-btn
+                      fab
+                      color="error"
+                      x-small>
+                      <b>x</b>
+                    </v-btn>
+                  </v-card-actions>
+                </v-img>
+              </div>
+            </div>
 
 
               <!-- icones nao estao funcionando deus nos ajude

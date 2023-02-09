@@ -42,7 +42,7 @@
         </v-col>
       </v-row>
     </v-container>
-     <v-btn
+    <v-btn
       :disabled="!valid"
       color="success"
       class="mr-4"
@@ -68,7 +68,7 @@ import PickDate from "~/components/PickDate.vue"
     data: () => ({
       valid: false,
       artist: '',
-      imgUrl: '',
+      imgsrc: '',
       Artist: [
         v => !!v || 'Artist name is required',
         v => v.length <= 50 || 'Name must be less than 50 characters',
@@ -94,21 +94,14 @@ import PickDate from "~/components/PickDate.vue"
         },
         add() {
             this.adding = true;
-            // add_gig(this.newGig).then(response => {
-            //     const gigs = response.data;
-            //     this.items.push(gigs);
-            //     this.newGig = "";
-            //     this.adding = false;
-            // })
-            AppApi.post("/gigs", {
-                artist: this.artist,
-                imgUrl: this.imgUrl,
-                date: this.date,
-            })
-            .then(response => {
-
+            add_gig(this.newGig).then(response => {
+                this.items.push(newGig);
+                this.newGig = "";
+                this.imgsrc = "";
             })
         }
     }
   }
 </script>
+
+// https://st2.depositphotos.com/1000260/6281/i/600/depositphotos_62817033-stock-photo-music-band.jpg
