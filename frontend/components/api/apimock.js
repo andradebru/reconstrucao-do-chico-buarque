@@ -35,17 +35,41 @@ const api = {
             user: logged_user,
         } : {authenticated: false});
     },
-    add_todo(newtask){
-        return mockasync({description: newtask, done: false});
-    },
-    list_todos(){
+    // add_todo(newtask){
+    //     return mockasync({description: newtask, done: false});
+    // },
+    palavras_aleatoriaveis(){
         return mockasync({
-            todos: [
-                {description: 'Do the laundry', done: true},
-                {description: 'Walk the dog', done: false}
-            ]
+            palavras: [
+                // 'última', 'único', 'tímido', 'máquina', 'sólidas', 'mágico', 'lágrima', 'sábado', 'príncipe', 'náufrago', 'música', 'bêbado', 'pássaro', 'flácido', 'público', 'tráfego', 'pródigo', 'bêbado',
+                {palavra: 'última'},
+                {palavra: 'único'},
+                {palavra: 'tímido'},
+                {palavra: 'máquina'},
+                {palavra: 'sólidas'},
+                {palavra: 'mágico'},
+                {palavra: 'lágrima'},
+                {palavra: 'sábado'},
+                {palavra: 'príncipe'},
+                {palavra: 'náufrago'},
+                {palavra: 'música'},
+                {palavra: 'bêbado'},
+                {palavra: 'pássaro'},
+                {palavra: 'flácido'},
+                {palavra: 'público'},
+                {palavra: 'tráfego'},
+                {palavra: 'pródigo'},
+                {palavra: 'bêbado'},
+                ]
         });
     }
+    // list_todos(){
+    //         return mockasync({
+    //             todos: [
+    //                 {description: 'Do the laundry', done: true},
+    //                 {description: 'Walk the dog', done: false}
+    //             ]
+    //         });
 };
 
 export default api;
