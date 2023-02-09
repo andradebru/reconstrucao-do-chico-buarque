@@ -2,43 +2,24 @@
   <v-form v-model="valid">
     <v-container>
       <v-row>
-        <v-col
-          cols="12"
-          md="4"
-        >
+        <v-col cols="12" md="4">
           <v-text-field
             v-model="artist"
-            :rules="Date"
             :counter="50"
             label="Artist"
-            required
           ></v-text-field>
         </v-col>
 
-        <v-col
-          cols="12"
-          md="4"
-        >
+        <v-col cols="12" md="4">
           <v-text-field
-            v-model="imgUrl"
-            :rules="Date"
-            :counter="180"
+            v-model="imgsrc"
+            :counter="500"
             label="Img URL"
-            required
           ></v-text-field>
         </v-col>
 
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <!-- <v-text-field
-            v-model="date"
-            :rules="dateRules"
-            label="Date"
-            required
-          ></v-text-field> -->
-          <PickDate/>
+        <v-col cols="12" md="4">
+          <PickDate />
         </v-col>
       </v-row>
     </v-container>
@@ -50,12 +31,8 @@
     >
         Save
     </v-btn>
-    <v-btn
-      :disabled="!valid"
-      class="mr-4"
-      @click="reset"
-    >
-        Clear
+    <v-btn :disabled="!valid" class="mr-4" @click="reset">
+      Clear
     </v-btn>
   </v-form>
 </template>
@@ -82,7 +59,17 @@ import PickDate from "~/components/PickDate.vue"
     components: {
         PickDate
     } ,
+    created() {
+        this.listGigs()
+  },
     methods: {
+        async listGigs() {
+            const response = await AppApi.list_gigs()
+            this.gigs = response.data.gigs
+        },
+        setDate(date) {
+            this.date = date
+        },
         validate () {
             this.$refs.form.validate()
         },

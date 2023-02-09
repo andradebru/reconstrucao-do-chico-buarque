@@ -6,3 +6,4 @@ coverage.xml
 htmlcov/
 .idea
 /projetofinal.log
+.venv

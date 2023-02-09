@@ -13,7 +13,7 @@
             </v-list-tile-title>
           </v-list-tile-content>
           <v-list-tile-action>
-            <v-switch v-model="item.done"/>
+            <v-switch v-model="item.done" :loading="item.done"/>
           </v-list-tile-action>
         </v-list-tile>
       </template>
