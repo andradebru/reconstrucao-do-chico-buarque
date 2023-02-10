@@ -9,6 +9,7 @@
             </tr>
           </t-body>
       </table >
+      <v-btn @click="resetList">Mudar palavras</v-btn>
     </v-card>
   </v-container>
 </template>
@@ -29,12 +30,18 @@
         this.items = response.data.palavras
         this.versos = response.data.versos
         for (let i = 0; i < 18; i++)
-        this.randomWordsList.push(this.randomWord(this.items))
+          this.randomWordsList.push(this.randomWord(this.items))
       })
     },
     methods: {
       randomWord (items) {
           return items[Math.floor(Math.random() * items.length)];
+      },
+      resetList () {
+        this.randomWordsList = []
+        for (let i = 0; i < 18; i++) {
+            this.randomWordsList.push(this.randomWord(this.items))
+        }
       }
     }
   }
