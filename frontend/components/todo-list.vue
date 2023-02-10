@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card max-width="300px">
+    <v-card max-width="350px">
       <v-progress-linear :indeterminate="true" v-if="loading"></v-progress-linear>
       <table>
           <t-body>
