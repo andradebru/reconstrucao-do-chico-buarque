@@ -1,7 +1,6 @@
 <template >
   <v-app id="inspire">
-    <toolbar :state="layout"/>
-    <sidenav-left :state="layout"/>
+    <!-- <toolbar :state="layout"/> -->
     <v-content>
       <v-container fluid>
         <nuxt></nuxt>
@@ -25,7 +24,7 @@
   import footer from '~/components/footer.vue'
   export default {
     components: {
-      toolbar,
+      // toolbar,
       leFooter: footer
     },
     data: () => ({

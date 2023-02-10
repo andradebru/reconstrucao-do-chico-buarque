@@ -1,11 +1,18 @@
 <template>
-  <v-layout justify-center align-center>
-    <v-btn color="success" :to="{name: 'todos'}">What TODO next?</v-btn>
+  <v-layout justify-left>
+    <LetraMusica/>
   </v-layout>
 </template>
 
 <script>
+import LetraMusica from '~/components/LetraMusica.vue'
+import Vuex from 'vuex'
+
 export default {
+  layout: 'complex',
+  components: {
+    LetraMusica
+  },
   data () {
     return {}
   }
