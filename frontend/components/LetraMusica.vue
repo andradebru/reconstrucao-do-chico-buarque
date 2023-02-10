@@ -1,7 +1,7 @@
 <template>
   <v-container>
       <p> <i>"as proparoxítonas no fim dos versos vão se revezando como o cubo mágico, que forma um desenho diferente a cada girada"</i></p> 
-      <p>- Canal Clara MostraLíngua</p>
+      <p>- Clara Jorgewich</p>
     <v-card max-width="350px">
       <table>
           <t-body>
