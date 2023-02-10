@@ -1,12 +1,11 @@
 <template>
   <v-container>
     <v-card max-width="350px">
-      <v-progress-linear :indeterminate="true" v-if="loading"></v-progress-linear>
       <table>
           <t-body>
             <tr v-for="(verso, index) in versos" :key="verso.verso">
-              <td>{{verso.verso}} </td>
-              <td>{{randomData[index].palavra}} </td>
+              <td>{{verso.verso}}</td>
+              <td>{{randomWordsList[index].palavra}}</td>
             </tr>
           </t-body>
       </table >
@@ -16,27 +15,25 @@
 
 <script>
   import AppApi from '~apijs'
+
   export default {
     data () {
       return {
         items: [],
         versos: [],
-        randomData: [],
+        randomWordsList: [],
       }
     },
     mounted () {
-      AppApi.palavras_aleatoriaveis().then(response => {
+      AppApi.versos_e_palavras().then(response => {
         this.items = response.data.palavras
         this.versos = response.data.versos
         for (let i = 0; i < 18; i++)
-        this.randomData.push(this.randomItem(this.items))
-        // this.randomData = this.randomItem(this.items)
+        this.randomWordsList.push(this.randomWord(this.items))
       })
     },
-
-
     methods: {
-      randomItem (items) {
+      randomWord (items) {
           return items[Math.floor(Math.random() * items.length)];
       }
     }

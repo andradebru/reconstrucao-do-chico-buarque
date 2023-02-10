@@ -35,10 +35,7 @@ const api = {
             user: logged_user,
         } : {authenticated: false});
     },
-    // add_todo(newtask){
-    //     return mockasync({description: newtask, done: false});
-    // },
-    palavras_aleatoriaveis(){
+    versos_e_palavras(){
         return mockasync({
             versos: [
                 {verso: 'Amou daquela vez como se fosse '},
@@ -58,44 +55,8 @@ const api = {
                 {verso: 'E se acabou no chão feito um pacote '},
                 {verso: 'Agonizou no meio do passeio '},
                 {verso: 'Morreu na contramão atrapalhando '},
-                // {verso: '(Beijou sua mulher) como se fosse a única'},
-                // {verso: '(E cada filho seu) como se fosse o pródigo'},
-                // {verso: 'E atravessou a rua com seu passo bêbado'},
-                // {verso: 'Subiu a construção como se fosse sólido'},
-                // {verso: 'Ergueu no patamar quatro paredes mágicas'},
-                // {verso: 'Tijolo com tijolo num desenho lógico'},
-                // {verso: 'Seus olhos embotados de cimento e tráfego'},
-                // {verso: 'Sentou pra descansar como se fosse um príncipe'},
-                // {verso: 'Comeu feijão com arroz como se fosse o máximo'},
-                // {verso: 'Bebeu e soluçou como se fosse máquina'},
-                // {verso: 'Dançou e gargalhou como se fosse o próximo'},
-                // {verso: 'E tropeçou no céu como se ouvisse música'},
-                // {verso: 'E flutuou no ar como se fosse sábado'},
-                // {verso: 'E se acabou no chão feito um pacote tímido'},
-                // {verso: 'Agonizou no meio do passeio náufrago'},
-                // {verso: 'Morreu na contramão atrapalhando o público'},
-                // {verso: 'Amou daquela vez como se fosse máquina'},
-                // {verso: 'Beijou sua mulher como se fosse lógico'},
-                // {verso: 'Ergueu no patamar quatro paredes flácidas'},
-                // {verso: 'Sentou pra descansar como se fosse um pássaro'},
-                // {verso: 'E flutuou no ar como se fosse um príncipe'},
-                // {verso: 'E se acabou no chão feito um pacote bêbado'},
-                // {verso: 'Morreu na contramão atrapalhando o sábado'},
-                // {verso: 'Por esse pão pra comer, por esse chão pra dormir'},
-                // {verso: 'A certidão pra nascer e a concessão pra sorrir'},
-                // {verso: 'Por me deixar respirar, por me deixar existir'},
-                // {verso: 'Deus lhe pague'},
-                // {verso: 'Pela cachaça de graça que a gente tem que engolir'},
-                // {verso: 'Pela fumaça, desgraça que a gente tem que tossir'},
-                // {verso: 'Pelos andaimes pingentes que a gente tem que cair'},
-                // {verso: 'Deus lhe pague'},
-                // {verso: 'Pela mulher carpinteira pra nos louvar e cuspir'},
-                // {verso: 'E pelas moscas bicheiras a nos beijar e cobrir'},
-                // {verso: 'E pela paz derradeira que enfim vai nos redimir'},
-                // {verso: 'Deus lhe pague'},
             ],
             palavras: [
-                // 'última', 'único', 'tímido', 'máquina', 'sólidas', 'mágico', 'lágrima', 'sábado', 'príncipe', 'náufrago', 'música', 'bêbado', 'pássaro', 'flácido', 'público', 'tráfego', 'pródigo', 'bêbado',
                 {palavra: 'última'},
                 {palavra: 'único'},
                 {palavra: 'tímido'},
@@ -113,16 +74,9 @@ const api = {
                 {palavra: 'tráfego'},
                 {palavra: 'pródigo'},
                 {palavra: 'bêbado'},
-                ]
+            ]
         });
     }
-    // list_todos(){
-    //         return mockasync({
-    //             todos: [
-    //                 {description: 'Do the laundry', done: true},
-    //                 {description: 'Walk the dog', done: false}
-    //             ]
-    //         });
 };
 
 export default api;
