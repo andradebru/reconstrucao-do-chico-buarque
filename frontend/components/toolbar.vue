@@ -1,7 +1,7 @@
 <template>
   <v-toolbar color="blue-grey" dark fixed app clipped-right>
     <v-toolbar-side-icon @click.stop="state.drawer = !state.drawer"></v-toolbar-side-icon>
-    <v-toolbar-title>GrooveMemo</v-toolbar-title>
+    <v-toolbar-title>Essa <b>construção</b> tá diferente</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn v-if="!logged_user" flat dark ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn>
     <v-menu v-if="logged_user" offset-y>
