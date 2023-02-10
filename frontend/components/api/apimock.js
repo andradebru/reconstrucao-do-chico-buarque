@@ -53,7 +53,6 @@ const api = {
                 {palavra: 'príncipe'},
                 {palavra: 'náufrago'},
                 {palavra: 'música'},
-                {palavra: 'bêbado'},
                 {palavra: 'pássaro'},
                 {palavra: 'flácido'},
                 {palavra: 'público'},
