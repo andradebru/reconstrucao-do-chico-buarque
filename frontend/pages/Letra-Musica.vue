@@ -1,17 +1,17 @@
 <template>
   <v-layout justify-left>
-    <todo-list/>
+    <LetraMusica/>
   </v-layout>
 </template>
 
 <script>
-import todoList from '~/components/todo-list.vue'
+import LetraMusica from '~/components/LetraMusica.vue'
 import Vuex from 'vuex'
 
 export default {
   layout: 'complex',
   components: {
-    todoList
+    LetraMusica
   },
   data () {
     return {}

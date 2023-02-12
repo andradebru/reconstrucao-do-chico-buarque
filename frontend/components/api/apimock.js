@@ -35,14 +35,45 @@ const api = {
             user: logged_user,
         } : {authenticated: false});
     },
-    add_todo(newtask){
-        return mockasync({description: newtask, done: false});
-    },
-    list_todos(){
+    versos_e_palavras(){
         return mockasync({
-            todos: [
-                {description: 'Do the laundry', done: true},
-                {description: 'Walk the dog', done: false}
+            versos: [
+                {verso: 'Amou daquela vez como se fosse '},
+                {verso: 'Beijou sua mulher como se fosse '},
+                {verso: 'E cada filho seu como se fosse '},
+                {verso: 'E atravessou a rua com seu passo '},
+                {verso: 'Subiu a construção como se fosse '},
+                {verso: 'Ergueu no patamar quatro paredes '},
+                {verso: 'Tijolo com tijolo num desenho '},
+                {verso: 'Seus olhos embotados de cimento '},
+                {verso: 'Sentou pra descansar como se fosse '},
+                {verso: 'Comeu feijão com arroz como se fosse '},
+                {verso: 'Bebeu e soluçou como se fosse '},
+                {verso: 'Dançou e gargalhou como se ouvisse '},
+                {verso: 'E tropeçou no céu como se fosse '},
+                {verso: 'E flutuou no ar como se fosse '},
+                {verso: 'E se acabou no chão feito um pacote '},
+                {verso: 'Agonizou no meio do passeio '},
+                {verso: 'Morreu na contramão atrapalhando '},
+            ],
+            palavras: [
+                {palavra: 'última'},
+                {palavra: 'único'},
+                {palavra: 'tímido'},
+                {palavra: 'máquina'},
+                {palavra: 'sólidas'},
+                {palavra: 'mágico'},
+                {palavra: 'lágrima'},
+                {palavra: 'sábado'},
+                {palavra: 'príncipe'},
+                {palavra: 'náufrago'},
+                {palavra: 'música'},
+                {palavra: 'pássaro'},
+                {palavra: 'flácido'},
+                {palavra: 'público'},
+                {palavra: 'tráfego'},
+                {palavra: 'pródigo'},
+                {palavra: 'bêbado'},
             ]
         });
     }

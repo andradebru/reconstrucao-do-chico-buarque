@@ -1,9 +1,9 @@
 <template>
-  <v-toolbar color="blue-grey" dark fixed app clipped-right>
-    <v-toolbar-side-icon @click.stop="state.drawer = !state.drawer"></v-toolbar-side-icon>
-    <v-toolbar-title>GrooveMemo</v-toolbar-title>
+  <v-toolbar fixed app elevation="0">
+    <v-toolbar-title>Essa <b>construção</b> tá diferente</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-btn v-if="!logged_user" flat dark ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn>
+    <v-btn :to="{name: 'sobre'}">Sobre</v-btn>
+    <!-- <v-btn v-if="!logged_user" flat ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn> -->
     <v-menu v-if="logged_user" offset-y>
       <v-btn icon slot="activator" class="ma-0 ml-5">
         <v-avatar size="36px">
@@ -39,7 +39,6 @@
         </v-list>
       </v-card>
     </v-menu>
-    <v-toolbar-side-icon @click.stop="state.drawerRight = !state.drawerRight"></v-toolbar-side-icon>
     <login-dialog ref="login_dialog"/>
   </v-toolbar>
 </template>
