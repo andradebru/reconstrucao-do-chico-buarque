@@ -54,6 +54,17 @@ def list_todos(request):
     todos = todo_svc.list_todos()
     return JsonResponse({'todos': todos})
 
+@ajax_login_required
+def list_todos(request):
+    todos = todo_svc.list_todos()
+    return JsonResponse({'todos': todos})
+
+
+def versos_e_palavras(request):
+    with open('frontend/components/api/estrofe', encoding='utf-8') as estrofe:
+        data = json.load(estrofe)
+    return JsonResponse(data)
+
 
 def _user2dict(user):
     d = {

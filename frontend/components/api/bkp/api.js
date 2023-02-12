@@ -16,8 +16,8 @@ const api = {
     add_todo(newtask){
         return post('/api/add_todo', {new_task: newtask});
     },
-    versos_e_palavras(){
-        return get('/api/estrofe');
+    list_todos(){
+        return get('/api/list_todos');
     }
 }
 export default api;

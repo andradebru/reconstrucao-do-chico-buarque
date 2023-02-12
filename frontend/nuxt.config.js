@@ -50,7 +50,7 @@ module.exports = {
         name: 'projetofinal',
         short_name: 'projetofinal',
         lang: 'pt-BR',
-        theme_color: 'blue',
+        // theme_color: 'blue',
       },
       workbox: {
       }
