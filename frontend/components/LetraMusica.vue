@@ -7,7 +7,7 @@
           <t-body>
             <tr v-for="(verso, index) in versos" :key="verso.verso">
               <td>{{verso.verso}}</td>
-              <td>{{randomWordsList[index].palavra}}</td>
+              <td>{{randomWordsList[index].palavra[index]}}</td>
             </tr>
           </t-body>
       </table >
@@ -22,27 +22,28 @@
   export default {
     data () {
       return {
-        items: [],
+        palavras: [],
         versos: [],
         randomWordsList: [],
       }
     },
     mounted () {
       AppApi.versos_e_palavras().then(response => {
-        this.items = response.data.palavras
+        console.log(response.data.palavras)
+        this.palavras = response.data.palavras
         this.versos = response.data.versos
         for (let i = 0; i < 18; i++)
-          this.randomWordsList.push(this.randomWord(this.items))
+          this.randomWordsList.push(this.randomWord(this.palavras))
       })
     },
     methods: {
-      randomWord (items) {
-          return items[Math.floor(Math.random() * items.length)];
+      randomWord (palavras) {
+          return palavras[Math.floor(Math.random() * palavras.length)];
       },
       resetList () {
         this.randomWordsList = []
         for (let i = 0; i < 18; i++) {
-            this.randomWordsList.push(this.randomWord(this.items))
+            this.randomWordsList.push(this.randomWord(this.palavras))
         }
       }
     }
