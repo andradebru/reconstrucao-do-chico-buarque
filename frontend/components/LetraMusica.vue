@@ -5,9 +5,9 @@
     <v-card max-width="350px">
       <table>
           <t-body>
-            <tr v-for="(verso, index) in versos" :key="verso.verso">
-              <td>{{verso.verso}}</td>
-              <td>{{randomWordsList[index].palavra[index]}}</td>
+            <tr v-for="(verso, index) in versos" :key="versos[index]">
+              <td>{{verso}}</td>
+              <td>{{randomWordsList[index]}}</td>
             </tr>
           </t-body>
       </table >
@@ -29,7 +29,6 @@
     },
     mounted () {
       AppApi.versos_e_palavras().then(response => {
-        console.log(response.data.palavras)
         this.palavras = response.data.palavras
         this.versos = response.data.versos
         for (let i = 0; i < 18; i++)
