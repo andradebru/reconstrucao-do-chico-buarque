@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <toolbar :state="layout"/>
     <!-- <sidenav-left :state="layout"/> 
     <sidenav-left-temp :state="layout"/>
@@ -25,3 +25,9 @@
     })
   }
 </script>
+
+<style>
+.v-app {
+  background-color:black !important;
+}
+</style>
