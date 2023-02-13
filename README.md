@@ -4,7 +4,7 @@ Construção é uma música de Chico Buarque, de 1971, que conta um dia comum de
 ![image](https://user-images.githubusercontent.com/77248375/218352924-9f444f66-8f8a-4fdd-b532-3d7a8190643b.png)
 
 
-Nas palavras da professora Clara:
+Nas palavras da professora Clara Jorgewich:
 
 "Palavras repetidas, em ritmo também repetitivo, transmitem o tédio daquele cotidiano, dramático por natureza – Seus olhos embotados de cimento e lágrima. Naquele dia, porém, uma nuvem sombria paira sobre a cabeça do pedreiro. Chico construiu o mau presságio usando o advérbio de modo COMO, mais o verbo IR no imperfeito do subjuntivo: COMO SE FOSSE. O efeito é angustiante – Amou daquela vez como se fosse a última. E se for a última? A morte ronda…"
 
