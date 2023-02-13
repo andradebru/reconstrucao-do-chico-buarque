@@ -30,4 +30,10 @@
 .v-app {
   background-color:black !important;
 }
+
+a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #fff;
+}
 </style>

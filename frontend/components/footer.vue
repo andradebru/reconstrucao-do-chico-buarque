@@ -17,10 +17,3 @@
 </script>
 
 
-<style scoped>
-a {
-  text-decoration: none;
-  font-weight: 800;
-  color: #fff;
-}
-</style>
