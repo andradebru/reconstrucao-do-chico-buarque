@@ -9,17 +9,10 @@ Nas palavras da professora Clara Jorgewich:
 "Palavras repetidas, em ritmo também repetitivo, transmitem o tédio daquele cotidiano, dramático por natureza – Seus olhos embotados de cimento e lágrima. Naquele dia, porém, uma nuvem sombria paira sobre a cabeça do pedreiro. Chico construiu o mau presságio usando o advérbio de modo COMO, mais o verbo IR no imperfeito do subjuntivo: COMO SE FOSSE. O efeito é angustiante – Amou daquela vez como se fosse a última. E se for a última? A morte ronda…"
 
 Neste projeto é possível recontar esse último dia de trabalho infinitamente, aleatoriamente, criando novas imagens metafóricas.
-Para isso basta clicar no9 botão "Mudar palavras" na paǵina.
+Para isso basta clicar no botão "Mudar palavras" na paǵina e ler as frases com final alterado.
 
 
-# 1. Dev-env, super-easy mode (docker all things)
-
-Requirements:
-- [Install docker](https://docs.docker.com/install/)
-- Learn [Python](https://docs.python.org/3/tutorial/) and [Django](https://docs.djangoproject.com/en/2.0/intro/tutorial01/)
-- Learn [vue.js](vuejs.org)
-- Learn [Nuxt.js](https://nuxtjs.org/)
-- Get familiar with [Vuetify.js](vuetifyjs.com/) components
+# 1. Como rodar localmente
 
 Step by step
 
@@ -38,6 +31,8 @@ dk bash  # starts bash inside "projetofinal" container
 ./manage.py migrate  # create database tables and stuff
 ./manage.py createsuperuser  # creates an application user in the database
 ```
+With `dkup` running, open another terminal
+28
 
 What is happenning:
 
@@ -96,7 +91,7 @@ sudo chmod -R o+rw .nuxt/  # I'll explain this later
 npm run dev  # Starts nuxt frontend on port 3000
 ```
 
-You can go ahed and point your browser to http://localhost:3000 to see nuxt running **with mocked apis**
+You can go ahed and point your browser to http://localhost:3001 to see nuxt running **with mocked apis**
 
 To run nuxt using real APIs just turn set this environment variable API_MOCK=0
 
