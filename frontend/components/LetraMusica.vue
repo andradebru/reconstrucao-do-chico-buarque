@@ -2,16 +2,10 @@
   <v-container>
     <v-div class="d-flex flex-column align-center justify-center">
     <v-card max-width="24vw" class="pa-4">
-      <table>
-          <t-body>
-            <tr v-for="(verso, index) in versos" :key="versos[index]">
-              <td>{{verso}}</td>
-              <v-spacer></v-spacer>
-              <td>{{randomWordsList[index]}}</td>
-            </tr>
-          </t-body>
-      </table >
-    <v-btn outline color=terciary class="mt-4 d-flex align-center" @click="resetList">Mudar palavras</v-btn>
+      <p v-for="(verso, index) in versos" :key="versos[index]">
+        {{verso}} <b>{{randomWordsList[index]}}</b>
+      </p>
+      <v-btn outline color=terciary class="mt-4 d-flex align-center" @click="resetList">Mudar palavras</v-btn>
     </v-card>
     </v-div>
   </v-container>
@@ -51,7 +45,8 @@
 </script>
 
 <style scoped>
-table {
+p {
+  line-height: 1.5rem;
   font-size: 1.3rem;
 }
 </style>
