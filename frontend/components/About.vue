@@ -1,6 +1,7 @@
 <template>
 <v-container>
   <v-layout justify-left>
+    <i>E a narrativa recomeça. As mesmas estrofes voltam à cena; porém, com uma mudança de efeito: as proparoxítonas no fim dos versos vão se revezando como o cubo mágico, que forma um desenho diferente a cada girada.</i>
     <!-- <blockquote> -->
         Construção é uma música de Chico Buarque, de 1971, que conta um dia comum de um trabalhador de construção que termina em um acidente de trabalho fatal.
         O autor enfatiza a rotina de trabalho e a banalidade da morte de trabalhadores como este com a repetição de estrofe, alterando as palavras ao final de cada verso, que se tornam novas metáforas e acabam alterando o sentido das frases.
@@ -10,6 +11,6 @@
 
         Nesta página é possível recontar esse último dia de trabalho infinitamente, aleatoriamente, criando novas imagens metafóricas.
     </v-layout>
-    <v-btn :to="{name: 'index'}">Voltar</v-btn>
+    <v-btn outline color=terciary class="mt-4"  :to="{name: 'index'}">Voltar</v-btn>
 </v-container>
 </template>

@@ -1,8 +1,15 @@
 <template>
-  <v-toolbar fixed app elevation="0">
+  <v-toolbar color="#30303000" flat fixed app elevation="0">
     <v-toolbar-title>Essa <b>construção</b> tá diferente</v-toolbar-title>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
+        <v-btn max-width="1vw" dark v-on="on">?</v-btn>
+      </template>
+      <span>Clique no botão mudar palavras e gere novas versões da música Construção, de Chico Buarque</span>
+    </v-tooltip>
     <v-spacer></v-spacer>
-    <v-btn :to="{name: 'sobre'}">Sobre</v-btn>
+    <v-btn flat :to="{name: 'sobre'}">Sobre</v-btn>
+    
     <!-- <v-btn v-if="!logged_user" flat ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn> -->
     <v-menu v-if="logged_user" offset-y>
       <v-btn icon slot="activator" class="ma-0 ml-5">

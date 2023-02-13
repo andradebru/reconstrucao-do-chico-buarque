@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar color="blue-grey" dark fixed app clipped-right>
+  <v-toolbar fixed app clipped-right>
     <v-toolbar-side-icon @click.stop="state.drawer = !state.drawer"></v-toolbar-side-icon>
     <v-toolbar-title>GrooveMemo</v-toolbar-title>
     <v-spacer></v-spacer>

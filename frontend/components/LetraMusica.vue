@@ -1,18 +1,19 @@
 <template>
   <v-container>
-      <p> <i>"as proparoxítonas no fim dos versos vão se revezando como o cubo mágico, que forma um desenho diferente a cada girada"</i></p> 
-      <p>- Clara Jorgewich</p>
-    <v-card max-width="350px">
+    <v-div class="d-flex flex-column align-center justify-center">
+    <v-card max-width="24vw" class="pa-4">
       <table>
           <t-body>
             <tr v-for="(verso, index) in versos" :key="versos[index]">
               <td>{{verso}}</td>
+              <v-spacer></v-spacer>
               <td>{{randomWordsList[index]}}</td>
             </tr>
           </t-body>
       </table >
-      <v-btn @click="resetList">Mudar palavras</v-btn>
+    <v-btn outline color=terciary class="mt-4 d-flex align-center" @click="resetList">Mudar palavras</v-btn>
     </v-card>
+    </v-div>
   </v-container>
 </template>
 
@@ -48,3 +49,9 @@
     }
   }
 </script>
+
+<style scoped>
+table {
+  font-size: 1.3rem;
+}
+</style>

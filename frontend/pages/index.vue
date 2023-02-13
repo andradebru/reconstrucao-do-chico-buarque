@@ -1,6 +1,7 @@
 <template>
   <v-layout justify-left>
     <LetraMusica/>
+    
   </v-layout>
 </template>
 
@@ -20,4 +21,5 @@ export default {
 </script>
 
 <style>
+
 </style>
