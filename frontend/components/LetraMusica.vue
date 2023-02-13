@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <v-div class="d-flex flex-column align-center justify-center">
-    <v-card max-width="24vw" class="pa-4">
+    <v-card max-width="450px" class="pa-4">
       <p v-for="(verso, index) in versos" :key="versos[index]">
         {{verso}} <b>{{randomWordsList[index]}}</b>
       </p>
-      <v-btn outline color=terciary class="mt-4 d-flex align-center" @click="resetList">Mudar palavras</v-btn>
+      <v-btn outline color=terciary class="ml-0 mt-4 d-flex align-center" @click="resetList">Mudar palavras</v-btn>
     </v-card>
     </v-div>
   </v-container>
