@@ -1,3 +1,17 @@
+Essa construção tá diferente!
+Construção é uma música de Chico Buarque, de 1971, que conta um dia comum de um trabalhador de construção que termina em um acidente de trabalho fatal. O autor enfatiza a rotina de trabalho e a banalidade da morte de trabalhadores como este com a repetição de estrofe, alterando as palavras ao final de cada verso, que se tornam novas metáforas e acabam alterando o sentido das frases.
+
+![image](https://user-images.githubusercontent.com/77248375/218352924-9f444f66-8f8a-4fdd-b532-3d7a8190643b.png)
+
+
+Nas palavras da professora Clara:
+
+"Palavras repetidas, em ritmo também repetitivo, transmitem o tédio daquele cotidiano, dramático por natureza – Seus olhos embotados de cimento e lágrima. Naquele dia, porém, uma nuvem sombria paira sobre a cabeça do pedreiro. Chico construiu o mau presságio usando o advérbio de modo COMO, mais o verbo IR no imperfeito do subjuntivo: COMO SE FOSSE. O efeito é angustiante – Amou daquela vez como se fosse a última. E se for a última? A morte ronda…"
+
+Neste projeto é possível recontar esse último dia de trabalho infinitamente, aleatoriamente, criando novas imagens metafóricas.
+Para isso basta clicar no9 botão "Mudar palavras" na paǵina.
+
+
 # 1. Dev-env, super-easy mode (docker all things)
 
 Requirements:
