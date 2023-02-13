@@ -5,7 +5,7 @@
       <template v-slot:activator="{ on }">
         <v-btn max-width="1vw" dark v-on="on">?</v-btn>
       </template>
-      <span>Clique no botão mudar palavras e gere novas versões da música Construção, de Chico Buarque</span>
+      <span>Clique no botão MUDAR PALAVRAS e gere novas versões da música Construção, de Chico Buarque</span>
     </v-tooltip>
     <v-spacer></v-spacer>
     <v-btn flat :to="{name: 'sobre'}">Sobre</v-btn>
