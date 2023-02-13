@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar color="#30303000" flat fixed app elevation="0">
+  <v-toolbar color="#303030" flat fixed app elevation="0">
     <v-toolbar-title>Essa <b>construção</b> tá diferente</v-toolbar-title>
     <v-tooltip bottom>
       <template v-slot:activator="{ on }">
