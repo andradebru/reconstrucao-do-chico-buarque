@@ -10,7 +10,7 @@
     <v-spacer></v-spacer>
     <v-btn flat :to="{name: 'sobre'}">Sobre</v-btn>
     
-    <!-- <v-btn v-if="!logged_user" flat ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn> -->
+    <v-btn v-if="!logged_user" flat ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn>
     <v-menu v-if="logged_user" offset-y>
       <v-btn icon slot="activator" class="ma-0 ml-5">
         <v-avatar size="36px">
