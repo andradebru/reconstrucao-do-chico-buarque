@@ -61,7 +61,7 @@ def list_todos(request):
 
 
 def versos_e_palavras(request):
-    with open('frontend/components/api/estrofe', encoding='utf-8') as estrofe:
+    with open('frontend/components/api/estrofe.json', encoding='utf-8') as estrofe:
         data = json.load(estrofe)
     return JsonResponse(data)
 
