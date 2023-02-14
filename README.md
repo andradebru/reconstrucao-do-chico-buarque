@@ -14,6 +14,8 @@ Para isso basta clicar no botão "Mudar palavras" na paǵina e ler as frases com
 
 # 1. Como rodar localmente
 
+Este projeto foi criado com uma versão antiga do template Djavue, a versao python usada foi 3.6.15.
+
 Step by step
 
 ```bash
