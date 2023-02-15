@@ -27,6 +27,12 @@ export default {
   background-color: black !important;
 }
 
+::selection {
+    background-color: #d7f171;
+    color: #000;
+    text-shadow: none;
+}
+
 a {
   text-decoration: none;
   font-weight: 800;
