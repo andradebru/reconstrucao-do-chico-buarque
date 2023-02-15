@@ -1,25 +1,22 @@
 <template>
   <v-layout justify-left>
-    <LetraMusica/>
-    
+    <LetraMusica />
   </v-layout>
 </template>
 
 <script>
-import LetraMusica from '~/components/LetraMusica.vue'
-import Vuex from 'vuex'
+import LetraMusica from "~/components/LetraMusica.vue";
+import Vuex from "vuex";
 
 export default {
-  layout: 'complex',
+  layout: "complex",
   components: {
     LetraMusica
   },
-  data () {
-    return {}
+  data() {
+    return {};
   }
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,20 +1,19 @@
 <template>
-    <v-layout>
-        <About/>
-    </v-layout>
+  <v-layout>
+    <About />
+  </v-layout>
 </template>
 
 <script>
-import About from '~/components/About.vue'
+import About from "~/components/About.vue";
 
 export default {
-  layout: 'complex',
+  layout: "complex",
   components: {
     About
   },
-  data () {
-    return {}
+  data() {
+    return {};
   }
-}
+};
 </script>
-
