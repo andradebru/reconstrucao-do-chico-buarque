@@ -9,11 +9,14 @@
     </v-tooltip>
     <v-spacer></v-spacer>
     <v-btn flat :to="{name: 'sobre'}">Sobre</v-btn>
-    
     <v-btn v-if="!logged_user" flat ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn>
     <v-menu v-if="logged_user" offset-y>
       <v-btn icon slot="activator" class="ma-0 ml-5">
-        <v-avatar size="36px">
+
+    <v-btn
+     :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'" @click.stop="themeClick"></v-btn>
+     
+    <v-avatar size="36px">
           <img src="https://graph.facebook.com/4/picture?width=300&height=300">
         </v-avatar>
       </v-btn>
@@ -55,7 +58,19 @@
   import loginDialog from '~/components/login-dialog.vue'
   import Snacks from '~/helpers/Snacks.js'
   import AppApi from '~apijs'
+
   export default {
+    props: {
+      theme: {
+      type: String,
+      required: true,
+      default: "dark",
+    },
+  },
+  emits: ["themeClick"],
+  data: () => {
+    return {}
+  },
     components: {
       loginDialog
     },
@@ -71,6 +86,12 @@
         this.$refs.login_dialog.open();
         evt.stopPropagation();
       },
+  },
+  methods: {
+    themeClick() {
+      this.$emit("themeClick")
+    },
+  },
       logout(){
         AppApi.logout().then(()=>{
           this.$store.commit('SET_LOGGED_USER', null);
@@ -78,5 +99,4 @@
         });
       }
     }
-  }
 </script>
